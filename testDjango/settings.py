@@ -76,13 +76,13 @@ WSGI_APPLICATION = 'testDjango.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default':{
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': 'agarwyyash.mysql.database.azure.com',
         'USER': 'agarwy@agarwyyash',
         'PASSWORD': 'Yashpdf1@',
         'NAME': 'agarwy',
-        'default-character-set' : 'utf8'
+        'default-character-set': 'utf8'
     }
 
 }
@@ -127,6 +127,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

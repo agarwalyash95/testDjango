@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Destination
+from .models import destination
 
-admin.site.registe(destination)
+admin.site.register(destination)
 
 # Register your models here.
