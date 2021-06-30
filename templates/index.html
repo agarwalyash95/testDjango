@@ -263,7 +263,7 @@
                      <div class="owl-carousel owl-theme">
                         {% for des in dest %}
                         <div class="item">
-                           <img class="img-responsive" src="{{ baseURL }}{{ des.img}}" alt="#" />
+                           <img class="img-responsive" src="{{ des.img.url }}" alt="#" />
                            <h3>{{ des.name }}</h3>
                            <p>{{ des.desc }}
                         </div>
