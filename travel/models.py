@@ -1,8 +1,7 @@
 from django.db import models
 
 
-class destination:
-    id: int
-    name: str
-    desc: str
-    img : str
+class destination(models.Model):
+    name = models.CharField(max_length = 100)
+    desc = models.TextField()
+    img = models.ImageField(upload_to = 'pics')

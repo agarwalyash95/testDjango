@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'travel',
+    'travel.apps.TravelConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,6 +76,14 @@ WSGI_APPLICATION = 'testDjango.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    'default':{
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'agarwyyash.mysql.database.azure.com',
+        'USER': 'agarwy@agarwyyash',
+        'PASSWORD': 'Yashpdf1@',
+        'NAME': 'agarwy',
+        'default-character-set' : 'utf8'
+    }
 
 }
 
