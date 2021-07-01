@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .models import destination
-def index(request):
 
+
+def index(request):
     dest = destination.objects.all()
 
-    return render(request, 'index.html', { 'dest' : dest})
+    return render(request, 'index.html', {'dest': dest})
