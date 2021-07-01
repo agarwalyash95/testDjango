@@ -75,8 +75,13 @@
                                  <li class="active"> <a href="#">Home</a> </li>
                                  <li> <a href="'#about">About</a> </li>
                                  <li><a href="#travel">Travel</a></li>
-                                 <li><a href="#blog">Blog</a></li>
-                                 <li><a href="#contact">Contact Us</a></li>
+                                 {% if user.is_authenticated %}
+                                 <li> HELLO, {{ user.first_name }}</li>
+                                 <li><a href="accounts/logout">logout</a></li>
+                                 {% else %}
+                                 <li><a href="accounts/register">Register</a></li>
+                                 <li><a href="accounts/login">Login</a></li>
+                                 {% endif %}
                               </ul>
                            </nav>
                         </div>
@@ -283,7 +288,7 @@
                   <div class="amazing-box">
                      <h2>Amazing London Tour</h2>
                      <span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</span>
-                     <a href="{% static '#">Book Now</a><a href="{% static '#">Get More</a>
+                     <a href="{% static '#">Book Now</a><a href="'#">Get More</a>
                   </div>
                </div>
             </div>
